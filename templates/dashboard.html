@@ -1,0 +1,71 @@
+{% include 'header.html' %}
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-12">
+                    <center>
+                        <h3>Sistem Untuk Memprediksi Mahasiswa Fakultas Teknologi Industri Lulus Tepat Waktu
+                        </h3>
+                    </center>
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </div>
+    {% block content %}
+    <!-- Main content -->
+    <section class="content">
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Default box -->
+                    <div class="card card-primary card-outline">
+                        <div class="card-header">
+                            <h4 class="card-title m-0">Prediksi</h4>
+                        </div>
+                        <div class="card-body">
+                            <h6 class="card-title">Metode Forecasting Time Series model AutoRegressive Integrated Moving
+                                Average(ARIMA)</h6>
+
+                            <p class="card-text">
+                            </p>
+                        </div>
+                        <!-- /.card-footer-->
+                    </div>
+                    <!-- /.card -->
+                </div>
+
+                <div class="col-12">
+                    <!-- Default box -->
+                    <div class="card card-primary card-outline">
+                        <div class="card-header">
+                            <h4 class="card-title m-0">Klasifikasi</h4>
+                        </div>
+                        <div class="card-body">
+                            <h6 class="card-title">Metode Support Vector Machine (SVM)</h6>
+                            <p class="card-text"></p>
+                            <p class="card-text">sistem ini dapat mengklasifikasikan mahasiswa yang lulus tepat waktu
+                                dan lulus tidak tepat waktu.</p>
+                            <p class="card-text">sistem ini juga dapat memberikan informasi persentase mahasiswa yang
+                                lulus tepat waktu dan lulus tidak tepat waktu.</p>
+                        </div>
+                        <!-- /.card-footer-->
+                    </div>
+                    <!-- /.card -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+<!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+{% endblock %}
+
+{% include 'footer.html' %}

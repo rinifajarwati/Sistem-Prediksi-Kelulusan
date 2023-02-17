@@ -1,0 +1,45 @@
+{% include 'header.html' %}
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h4 class="m-0">Form Upload</h4>
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </div>
+    {% block content %}
+    <!-- Main content -->
+    <section class="content">
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Default box -->
+                    <div class="card">
+                        <div class="card-body">
+                            Input File Here
+                            <form action='/dasboard' method='post' enctype='multipart/form-data'>
+                                <p><input type="file" name="file"><input type=submit value=Upload>
+                            </form>
+                        </div>
+                        <!-- /.card-footer-->
+                    </div>
+                    <!-- /.card -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+<!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+{% endblock %}
+
+{% include 'footer.html' %}

@@ -1,0 +1,38 @@
+{% include 'header.html' %}
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <!-- /.content-header -->
+            {% block content %}
+            <!-- Main content -->
+            <!-- Main content -->
+            <section class="content">
+                <div class="error-page">
+                    <center>
+                        <div class="error-content">
+                            <h3><i class="fas fa-exclamation-triangle text-warning"></i> Oops!
+                                Halaman Tidak Ditemukan.</h3>
+
+                            <p>
+                                Kami tidak dapat menemukan halaman yang Anda cari. Silahkan <a
+                                    href="{{ url_for('login')}}"> Login </a>Terlebih dahulu.
+                            </p>
+                    </center>
+                </div>
+                <!-- /.error-content -->
+                <!-- /.error-page -->
+            </section>
+            <!-- /.content -->
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+        {% endblock %}
+    </div><!-- /.col -->
+</div><!-- /.row -->
+</div><!-- /.container-fluid -->
+</div>
+
+{% include 'footer.html' %}

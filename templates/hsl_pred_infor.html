@@ -1,0 +1,94 @@
+{% include 'header.html' %}
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </div>
+    {% block content %}
+    <!-- Main content -->
+    <section class="content">
+        <!-- <form action="/klasifikasi" method="post"> -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Default box -->
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="form-group">
+                                <center>
+                                    <h5>Hasil Prediksi Mahasiswa Lulus Tepat Waktu Informatika</h5>
+                                </center>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg">
+                                            <div class="table-responsive">
+                                                <table class="table table-hover">
+                                                    <thead class="thead-light">
+                                                        <tr>
+                                                            <th scope="col">No.</th>
+                                                            <th scope="col">Masa Studi</th>
+                                                            <th scope="col">Tahun</th>
+                                                            <th scope="col">Frequensi</th>
+                                                        </tr>
+                                                    </thead>
+
+                                                    <tbody>
+
+                                                        {% for d in data %}
+                                                        <tr>
+                                                            <th scope="row">{{ loop.index }}</th>
+                                                            <td>{{ d.ms }}</td>
+                                                            <td>{{ d.thn }}</td>
+                                                            <td>{{ d.freq }}</td>
+                                                            {% endfor %}
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <!-- /.contacts-list -->
+                                        </div>
+                                        <!-- /.direct-chat-pane -->
+                                    </div>
+                                    <!-- /.card-body -->
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    Hasil Prediksi Mahasiswa Informatika
+                                                </div>
+                                                <div class="card-body">
+                                                    <img src="{{ url_for('static',filename='img/chartPredInfor.png')}}"
+                                                        id="logo" width="400px" />
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.card-footer-->
+                </div>
+                <!-- /.card -->
+            </div>
+        </div>
+</div>
+<!-- </form> -->
+
+</section>
+<!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+<!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+{% endblock %}
+
+{% include 'footer.html' %}

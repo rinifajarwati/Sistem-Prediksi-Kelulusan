@@ -1,0 +1,61 @@
+{% include 'header.html' %}
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h4 class="m-0">Form Upload Klasifikasi</h4>
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </div>
+    {% block content %}
+    <!-- Main content -->
+    <section class="content">
+        <!-- <form action="/klasifikasi" method="post"> -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Default box -->
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="form-group">
+                                <form action='/klasifikasi' method='post'>
+                                    <label for="inputStatus">Program Studi</label>
+                                    <select id="inputStatus" class="form-control custom-select">
+                                        <option disabled selected>Select one</option>
+                                        <option value="1">Informatika</option>
+                                        <option value="2">Teknik Industri</option>
+                                        <option value="3">Teknik Elektro</option>
+                                        <option value="4">Teknik Kimia</option>
+                                    </select>
+                                </form>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputdata">Upload Data Excel Program Studi</label>
+                                <form action='/klasifikasi' method='post' enctype='multipart/form-data'>
+                                    <p><input type="file" name="file"><input type=submit value=Upload>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- /.card-footer-->
+                    </div>
+                    <!-- /.card -->
+                </div>
+            </div>
+        </div>
+        <!-- </form> -->
+
+    </section>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+<!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+{% endblock %}
+
+{% include 'footer.html' %}

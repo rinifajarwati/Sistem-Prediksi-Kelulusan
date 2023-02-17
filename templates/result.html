@@ -1,0 +1,53 @@
+{% include 'header.html' %}
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <a href="{{ url_for('klasifikasi') }}" class="btn btn-sm btn-primary"
+                        style="margin-bottom: 1.3rem;">Back</i></a>
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </div>
+    {% block content %}
+    <!-- Main content -->
+    <section class="content">
+        <!-- <form action="/klasifikasi" method="post"> -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Default box -->
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="form-group">
+                                <center>
+                                    <h5>Hasil Klasifikasi Mahasiswa Lulus Tepat Waktu dan Tidak Tepat Waktu</h5>
+                                </center>
+                                <div class="container">
+                                    {{hasil|safe}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.card-footer-->
+                </div>
+                <!-- /.card -->
+            </div>
+        </div>
+</div>
+<!-- </form> -->
+
+</section>
+<!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+<!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+{% endblock %}
+
+{% include 'footer.html' %}

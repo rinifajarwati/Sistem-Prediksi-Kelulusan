@@ -1,0 +1,86 @@
+{% include 'header.html' %}
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </div>
+    {% block content %}
+    <!-- Main content -->
+    <section class="content">
+        <!-- <form action="/klasifikasi" method="post"> -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Default box -->
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="form-group">
+                                <center>
+                                    <h5>Hasil Prediksi Mengunakan ARIMA</h5>
+                                </center>
+                                <div class="container">
+                                    {{hasil|safe}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.card-footer-->
+            </div>
+            <!-- /.card -->
+        </div>
+</div>
+</div>
+<!-- </form> -->
+
+</section>
+<!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+<!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+{% endblock %}
+
+{% include 'footer.html' %}
+
+
+<!-- <!DOCTYPE html> -->
+<!-- <html>
+
+<head>
+    <title> ARIMA</title>
+</head>
+
+<body>
+    <h1>Prediksi ARIMA</h1>
+    <div class="container">
+        <h2>WELCOME</h2>
+        <div>
+            {% for table in tables %}
+            {{titles[loop.index]}} -->
+<!-- {{ table|safe }}
+            {% endfor %}
+        </div>
+        <img src="data:image/png;base64, {{ plot_url }}" height="700" width="1000" />
+        {% if hasil %}
+        <p>tidak tepat waktu {{hasil|safe}}</p>
+        <P>tepat waktu {{hasil2|safe}}</P>
+        {% else %}
+        <p>data error</p>
+        {% endif %} -->
+<!-- <button>
+            <a href="/prediksi" class="text-center">Prediksi kembali!</a>
+        </button>
+    </div>
+    </div>
+</body>
+
+</html> -->

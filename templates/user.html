@@ -1,0 +1,73 @@
+{% include 'header.html' %}
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </div>
+
+    <!-- Main content -->
+    <section class="content">
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Default box -->
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="col-lg-10">
+                                <table class="table table-hover">
+                                    <thead class="thead-light">
+                                        <tr>
+                                            <th scope="col">No.</th>
+                                            <th scope="col">Nama</th>
+                                            <th scope="col">Email</th>
+                                            <th scope="col">Posisi</th>
+                                            <th scope="col">Pilihan</th>
+                                            <th scope="col"></th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+
+                                        {% for u in user %}
+                                        <tr>
+                                            <th scope="row">{{ loop.index }}</th>
+                                            <td>{{ u.name }}</td>
+                                            <td>{{ u.email }}</td>
+                                            <td>{{ u.posisi }}</td>
+                                            <td>
+                                                <a href="{{ url_for('edit_user', id= u.id) }}"
+                                                    class="btn btn-sm btn-warning">Edit</i></a>
+                                                <a href="{{ url_for('hapus_user', id= u.id) }}"
+                                                    class="btn  btn-sm btn-danger"
+                                                    onclick="return confirm('Anda Yakin Menghapus Data Ini ?')">Delete</a>
+                                            </td>
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- /.card-footer-->
+                    </div>
+                    <!-- /.card -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+<!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+
+{% include 'footer.html' %}

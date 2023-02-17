@@ -1,0 +1,102 @@
+{% include 'header.html' %}
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </div>
+    {% block content %}
+    <!-- Main content -->
+    <section class="content">
+        <!-- Pesan Flash-->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        {% for category, message in messages %}
+        <!-- alert -->
+        <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+            <strong>{{ message }}</strong>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Default box -->
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="col-lg-10">
+                                <form action="{{ url_for('edit_user', id=data.id) }}" method="POST">
+                                    <div class="form-group ">
+                                        <input type="hidden" name="id" value="{{data.id}}" class="form-control" />
+                                        <label for="nama">Nama</label>
+
+                                        <input type="text" class="form-control" id="name" name="name"
+                                            value="{{data.name}}" placeholder="Input Nama" required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="password">Password</label>
+                                        <input type="password" class="form-control" id="password" name="password"
+                                            placeholder="Password" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">Email</label>
+                                        <input type="email" class="form-control" id="email" name="email"
+                                            value="{{data.email}}" aria-describedby="emailHelp"
+                                            placeholder="Input Email" required>
+                                        <small id="emailHelp" class="form-text text-muted">We'll never share your email
+                                            with anyone else.</small>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="posisi">Posisi</label>
+                                        <select class="form-control" name="posisi" id="posisi" value="{{data.posisi}}"
+                                            required>
+                                            <option disabled selected>Select one</option>
+                                            <option value="Tata Usaha">Tata Usaha</option>
+                                            <option value="Prodi">Prodi</option>
+                                        </select>
+
+                                    </div>
+                                    <div class="form-inline">
+                                        <div class="form-group mb-2">
+                                            <a href="/user" class="btn btn-sm btn-primary ">Back</a>
+                                        </div>
+                                        <div class="form-group mx-lg-3 mb-2">
+                                            <button type="submit" class="btn btn-success btn-sm m-2 "
+                                                name="submit">Update</button>
+                                        </div>
+                                    </div>
+
+                            </div>
+
+
+                            </form>
+                        </div>
+                    </div>
+                    <!-- /.card-footer-->
+                </div>
+                <!-- /.card -->
+            </div>
+        </div>
+</div>
+</section>
+<!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+<!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+{% endblock %}
+
+{% include 'footer.html' %}

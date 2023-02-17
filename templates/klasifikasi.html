@@ -1,0 +1,65 @@
+{% include 'header.html' %}
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h4 class="m-0">Form Upload Klasifikasi</h4>
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </div>
+    {% block content %}
+    <!-- Main content -->
+    <section class="content">
+        <!-- <form action="/klasifikasi" method="post"> -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-7">
+                    <!-- Default box -->
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="form-group">
+                                <form action='/klasifikasi' method='post' enctype='multipart/form-data'>
+                                    <div class="col-sm-5 row-mb-3">
+                                        <label for="datasetType">Program Studi</label>
+                                        <select name="datasetType" id="datasetType" class="form-control custom-select">
+                                            <option disabled selected>Select one</option>
+                                            <option value="Informatika">Informatika</option>
+                                            <option value="Teknik Industri">Teknik Industri</option>
+                                            <option value="Teknik Elektro">Teknik Elektro</option>
+                                            <option value="Teknik Kimia">Teknik Kimia</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-10">
+                                        <label for="inputdata">Upload Data Excel Program Studi</label>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <input type="file" name="file" id="file">
+                                        <input type=submit value=Upload>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                        <!-- /.card-footer-->
+                    </div>
+                    <!-- /.card -->
+                </div>
+            </div>
+        </div>
+        <!-- </form> -->
+
+    </section>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+<!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+{% endblock %}
+
+{% include 'footer.html' %}
